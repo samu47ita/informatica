@@ -3,18 +3,18 @@
 int main()
 {
     int s,c,num;
-    s=0
-    c=0
+    s=0;
+    c=0;
     do
     {
-        printf("inserisci nuneri interi")
-       scanf("%d"&num);
+       printf("inserisci nuneri interi : ");
+       scanf("%d", &num);
        s=s+num;  
-       c=c++;
+       c=c+1;
     } while (c<10);
     printf("la somma e uguale a: %d ",s);
-    printf("\n")
+    printf("\n");
  
-    return 0
+    return 0;
     
 }
