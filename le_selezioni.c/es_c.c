@@ -2,7 +2,7 @@
 int main ()
 {
      int spesa;
-    printf("inserisci l'importo della spesa");
+    printf("inserisci l'importo della spesa ");
     scanf("%d", &spesa);
     if(spesa>50)
     {
@@ -23,5 +23,6 @@ int main ()
       printf("nesuno sconto aplicabile al importo da pagare e: %d", spesa);
     }       
     
+    printf("\n\n");
     return 0;    
 }
