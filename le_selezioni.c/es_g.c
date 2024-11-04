@@ -13,13 +13,13 @@ output: stampare schermo il carattere e i corrispondenti codici ascii in decimal
 
 int main()
 {
-    int carattere;
+    char carattere;
 
     printf("inserisci un carattere: ");
-    scanf("%d", &carattere );
+    scanf("%c", &carattere );
     printf("\n");
 
-    printf("il caratere inserito e'  : ", carattere);
-
+    printf("il caratere inserito e' dec=%d, esad=%x, char=%c \n", carattere, carattere, carattere);
     
+    return 0;
 }
