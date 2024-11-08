@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int main
+int main ()
 {
     int max,min,num;
     printf("inserisci dei numeri \n");
     do
     {
-        scanf("%d" &num);
+        scanf("%d", &num);
         if (num>max)
         {
             max=num;
@@ -16,11 +16,12 @@ int main
             min=num;
         }
         
-    } while (num != o);
+    } while (num != 0);
 
     printf("il magiore e' :%d", max );
+    printf("\n");
     printf("il minore e' :%d", min);
     printf("\n");
 
-    return0 ;
+    return 0;
 }
