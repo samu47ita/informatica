@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main
+{
+    int max,min,num;
+    printf("inserisci dei numeri \n");
+    do
+    {
+        scanf("%d" &num);
+        if (num>max)
+        {
+            max=num;
+        }
+        if(num<min)
+        {
+            min=num;
+        }
+        
+    } while (num != o);
+
+    printf("il magiore e' :%d", max );
+    printf("il minore e' :%d", min);
+    printf("\n");
+
+    return0 ;
+}
