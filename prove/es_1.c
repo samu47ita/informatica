@@ -18,9 +18,9 @@ int main ()
         
     } while (num != 0);
 
-    printf("il magiore e' :%d", max );
+    printf("il magiore e' : %d", max );
     printf("\n");
-    printf("il minore e' :%d", min);
+    printf("il minore e' : %d", min);
     printf("\n");
 
     return 0;
