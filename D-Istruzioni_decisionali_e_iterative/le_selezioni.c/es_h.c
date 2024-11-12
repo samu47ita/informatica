@@ -11,10 +11,25 @@ elaborazione: codice ascii in decimale è esadecimale
 output: stampare schermo il carattere e i corrispondenti codici ascii in decimale e esadecimale
 */
 
-# include <stdio.h>
+int main() {
+    char carattere;
 
-int main()
-{
- 
+    printf("Inserisci un carattere: ");
+    scanf("%c", &carattere);
+
+    if ((carattere >= 'a' && carattere <= 'z') || (carattere >= 'A' && carattere <= 'Z')) {
+       
+        if (carattere >= 'a' && carattere <= 'z') {
+            printf("%c\n", carattere - 'a' + 'A');
+        }
+       
+        else if (carattere >= 'A' && carattere <= 'Z') {
+            printf("%c\n", carattere - 'A' + 'a');
+        }
+    } else {
+       
+        printf("Non è una lettera\n");
+       }
+
     return 0;
-}
+}    

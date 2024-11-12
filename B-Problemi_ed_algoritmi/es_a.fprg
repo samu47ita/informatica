@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es_aa"/>
+        <attribute name="authors" value="23christixn"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-16 05:47:07 "/>
+        <attribute name="created" value="MjNjaHJpc3RpeG47REVTS1RPUC1BRzU4OTdGOzIwMjQtMDktMTY7IjA0OjQ4OjU1ICI7MzMwNA=="/>
+        <attribute name="edited" value="MjNjaHJpc3RpeG47REVTS1RPUC1BRzU4OTdGOzIwMjQtMDktMTY7IjA1OjQ3OjA3ICI7MjszNDEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="raggio" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci il raggio&quot;" newline="True"/>
+            <input variable="raggio"/>
+            <declare name="area" type="Real" array="False" size=""/>
+            <assign variable="area" expression="3.14*raggio*raggio"/>
+            <declare name="circonferenza" type="Integer" array="False" size=""/>
+            <assign variable="circonferenza" expression="2*3.14*raggio"/>
+            <output expression="&quot;area=&quot;&amp;  area" newline="True"/>
+            <output expression="&quot;circonferenza =&quot;&amp;  circonferenza" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
