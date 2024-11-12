@@ -11,20 +11,23 @@ elaborazione: codice ascii in decimale è esadecimale
 output: stampare schermo il carattere e i corrispondenti codici ascii in decimale e esadecimale
 */
 
-int main() {
+int main() 
+{
     char carattere;
 
-    printf("Inserisci un carattere: ");
-    scanf("%c", &carattere);
+    printf ("Inserisci un carattere: \n");
+    scanf ("%c", &carattere);
 
     if ((carattere >= 'a' && carattere <= 'z') || (carattere >= 'A' && carattere <= 'Z')) {
        
-        if (carattere >= 'a' && carattere <= 'z') {
-            printf("%c\n", carattere - 'a' + 'A');
+        if (carattere >= 'a' && carattere <= 'z') 
+        {
+            printf("il caratere e minuscolo ", carattere );
         }
        
-        else if (carattere >= 'A' && carattere <= 'Z') {
-            printf("%c\n", carattere - 'A' + 'a');
+        else if (carattere >= 'A' && carattere <= 'Z') 
+        {
+            printf("il caratere e mauiuscolo ", carattere );
         }
     } else {
        
@@ -32,4 +35,4 @@ int main() {
        }
 
     return 0;
-}    
+}  
