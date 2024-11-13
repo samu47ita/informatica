@@ -6,3 +6,10 @@
  * @author Samuele Poli, 3H
  * @date 13/11/24
  */
+
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2;
+}
