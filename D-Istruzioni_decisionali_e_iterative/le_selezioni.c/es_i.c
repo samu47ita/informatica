@@ -29,7 +29,7 @@ int main() {
             break;
         case 's':
         case 'S':
-            printf("Sabato\nDomenica\n");
+            printf("Sabato\n");
             break;
         case 'd':
         case 'D':
