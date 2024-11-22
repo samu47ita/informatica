@@ -11,7 +11,8 @@
 
 int main()
 {
-    int num,media,contatore,somma;
+    int num,contatore,somma;
+    float media;
     contatore=0;
     somma=0;
      printf("inserisci dei numeri \n");
@@ -23,7 +24,7 @@ int main()
      
     } while (num!=0);
     media=somma/contatore;
-    printf("media =%d", media);
+    printf("media =%.1f", media);
     printf("\n");
     printf("somma : %d", somma);
     printf("\n");
