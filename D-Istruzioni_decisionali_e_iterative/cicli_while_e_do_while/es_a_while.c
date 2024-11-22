@@ -11,8 +11,7 @@
 
 int main()
 {
-    int num,contatore,somma;
-    float media;
+    int num,contatore,somma; float media;  
     contatore=0;
     somma=0;
      printf("inserisci dei numeri \n");
