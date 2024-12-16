@@ -24,7 +24,7 @@ int main()
     {
         fattoriale *= cont;
     }
-    printf("ilfattorile di %d è:%d \n",n,fattoriale);
+    printf("il fattorile di %d è:%d \n",n,fattoriale);
 
 return 0;
 
