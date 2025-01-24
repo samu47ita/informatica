@@ -13,8 +13,9 @@ int main ()
     schambio(&a,&b);
 
     printf("il valore di a e: %d ",a);
+    printf("\n");
     printf("il valore di b  e: %d",b);
-    
+    printf("\n");    
 
     return 0;
 }
