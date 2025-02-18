@@ -7,12 +7,12 @@ if [ $password = "123" ] && [ $nome = "samuele" ]
 
 then
     
-    echo "il nome utente corisponde e "
+    echo -e "\nil nome utente corisponde e "
     echo "la password e giusta"
     
 
 else 
-    echo "il nome utente e sbagliato o"
+    echo -e "\nil nome utente e sbagliato o"
 
     echo "la password e sbagliata" 
 fi
