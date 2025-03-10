@@ -3,7 +3,7 @@
  * @param costante N
  *  
  * @author Samuele Poli, 3H
- * @date 11/11/24
+ * @date 10/03/25
 */
 #include<stdio.h>
 
