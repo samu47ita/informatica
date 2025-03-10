@@ -1,6 +1,6 @@
 /* @brief 
- * @param 
- * @param 
+ * @param vetore
+ * @param costante N
  *  
  * @author Samuele Poli, 3H
  * @date 10/03/25
