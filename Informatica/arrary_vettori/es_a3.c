@@ -1,6 +1,4 @@
- #include<stdio.h>
- #include<stdlib.h>
- #include<time.h>
+
 
  int ricerca(int V[],int num);
  void stampa_array(int V[]);
