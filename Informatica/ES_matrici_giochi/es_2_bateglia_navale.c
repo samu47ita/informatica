@@ -10,10 +10,12 @@
  * necessarie per inizializzare e visualizzare il campo di gioco.
  * 
  * ANALISI DEI REQUISITI:
- * 1. Creare una matrice di dimensione 5x5 per rappresentare il campo di gioco
- * 2. Inizializzare la matrice con il carattere '~' che rappresenta l'acqua
- * 3. Visualizzare il campo di gioco con indici di riga e colonna
- * 4. Utilizzare una struttura modulare con funzioni separate per inizializzazione e visualizzazione
+ * 1. Utilizzare un generatore di numeri casuali per posizionare la nave
+ * 2. La nave deve avere una lunghezza di 3 caselle (definita come costante)
+ * 3. Implementare due modalità di posizionamento: orizzontale e verticale
+ * 4. Garantire che la nave sia sempre completamente all'interno del campo
+ * 5. Visualizzare il campo con la possibilità di mostrare o nascondere la nave
+ * 6. La nave è rappresentata dal carattere '#' nella matrice
  */
 #include<stdio.h>
 #include <stdlib.h>
