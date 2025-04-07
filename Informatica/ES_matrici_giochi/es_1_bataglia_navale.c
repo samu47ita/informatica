@@ -23,10 +23,7 @@ void visualizzaCampo(char campo[][DIMENSIONE]);
 
 int main()
 {
-    char campo[DIMENSIONE][DIMENSIONE];
-
-
-     
+    char campo[DIMENSIONE][DIMENSIONE];  
     inizializzaCampo(campo);
     visualizzaCampo(campo);
 
