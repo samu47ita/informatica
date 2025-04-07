@@ -16,20 +16,22 @@
  * 4. Utilizzare una struttura modulare con funzioni separate per inizializzazione e visualizzazione
  */
 #include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+#define LUNGHEZZA_NAVE 3
 #define DIMENSIONE 5
 void inizializzaCampo(char campo[][DIMENSIONE]);
-void visualizzaCampo(char campo[][DIMENSIONE]);
+void visualizzaCampo(char campo[][DIMENSIONE], int mostraNave); 
+void posizionaNave(char campo[][DIMENSIONE]);
 
 int main()
 {
     char campo[DIMENSIONE][DIMENSIONE];
-
-
      
     inizializzaCampo(campo);
-    visualizzaCampo(campo);
-
+    visualizzaCampo(campo,0);
+    
 }
 
 void inizializzaCampo(char campo[][DIMENSIONE]) 
@@ -48,7 +50,7 @@ void inizializzaCampo(char campo[][DIMENSIONE])
 
 }
 
-void visualizzaCampo(char campo[][DIMENSIONE]) 
+void visualizzaCampo(char campo[][DIMENSIONE], int mostraNave) 
 {
     // Implementare la funzione per visualizzare il campo
 
@@ -59,6 +61,19 @@ void visualizzaCampo(char campo[][DIMENSIONE])
             printf("%c \t",campo[i][j]);
         }
         printf("\n");
+    }
+
+}
+void posizionaNave(char campo[][DIMENSIONE])
+{
+    // Implementare la funzione per posizionare la nave casualmente
+    int poisine;
+
+    srand(time(NULL));
+    rand () % 2 ;
+    if(poisine == 1)
+    {
+        
     }
 
 }
