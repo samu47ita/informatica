@@ -46,8 +46,6 @@ void inizializzaCampo(char campo[][DIMENSIONE])
         }
 
     }
-    
-
 }
 
 void visualizzaCampo(char campo[][DIMENSIONE], int mostraNave) 
