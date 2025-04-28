@@ -1,7 +1,8 @@
-
+#include<stdio.h>
 
  int ricerca(int V[],int num);
  void stampa_array(int V[]);
+ int ricerca_bin (int vet[],int first,int last,int el);
 
  #define N 15
 
@@ -35,6 +36,8 @@
 
     stampa_array(vet);
 
+    
+
     return 0;
 }
 
@@ -61,3 +64,31 @@
         }
     
     }
+ 
+int ricerca_bin (int vet[],int first,int last,int el)
+{
+    int med;
+    if (first > last)
+        return -1;
+    else
+    {
+        med =(first + last) /2;
+        if (el == vet[med])
+        {
+            return med;
+        }
+        else
+        {
+            if (el>vet[med])
+            {
+                return ricerca_bin (vet,med+1,last,el);
+            }
+            else
+            {
+                return ricerca_bin (vet,first,med-1,el);
+            }
+        }
+ 
+    }    
+
+}    
