@@ -2,7 +2,7 @@
 
 #define n 20
 
-void caricatabella(persona s[]);
+
 
 struct data
 {
@@ -21,8 +21,10 @@ struct nascita
 struct persona
 {
     nascita persona ;
-    int voti[n];
+    int voti[10];
 }typedef persona;
+
+void caricatabella(persona s[]);
 
 int main()
 {
@@ -31,12 +33,12 @@ int main()
 
 void caricatabella(persona s[]) 
 {
-    for (int i = 0; i < n; i++)
-    {
 
+    for (int i = 0; i < 10; i++)
+    {
+        printf("inserisci il cognome : \n");
 
     }
-    
 
 
 
