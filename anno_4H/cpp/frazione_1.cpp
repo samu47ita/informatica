@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 
 class frazione
 {
@@ -28,7 +28,7 @@ public:
     }
     void stampa()
     {
-        cout << numeratore << "/" << denominatore;
+        std::cout << numeratore << "/" << denominatore;
     }
 };
 int main()
@@ -38,6 +38,6 @@ int main()
     f1.setdenominatore(2);
     int  n1= f1.getnumeratore();
     f1.stampa();
-    cout << endl; 
+   std:: cout << std :: endl; 
     return 0;
 }
