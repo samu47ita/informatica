@@ -26,17 +26,46 @@ public:
     {
         return denominatore;
     }
-    void stampa()
+   
+    int MCD  (int x, int y)
+    {
+        while (x != y)
+        {
+         if (x>y)
+         {
+            x= x - y;
+         }
+         else
+         {
+            y= y-x;
+         }
+        
+        }
+        return x;
+    }
+    void semplifica()
+    {
+        int r = MCD(numeratore, denominatore);
+        numeratore /= r;
+        denominatore /= r;
+    }
+     void stampa()
     {
         cout << numeratore << "/" << denominatore;
     }
 };
 int main()
 {
+    int num1,num2;
+    cout << "inserisci un numero: \n";
+    cin >> num1;
+    cout << "inserisci un numero: \n";
+    cin >> num2;
     frazione f1,f2;
-    f1.setnumeratore(16);
-    f1.setdenominatore(2);
-    int  n1= f1.getnumeratore();
+    f1.setnumeratore(num1);
+    f1.setdenominatore(num2);
+    f1.semplifica();
+    // int  n1= f1.getnumeratore();
     f1.stampa();
     cout << endl; 
     return 0;
