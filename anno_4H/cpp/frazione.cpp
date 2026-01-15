@@ -9,6 +9,11 @@ private:
     int denominatore;
 
 public:
+    frazione(){}
+    frazione(int d)
+    {
+        denominatore = d;
+    }
 
     void setnumeratore(int n) 
     {
