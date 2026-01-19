@@ -32,7 +32,7 @@ int main ()
     cin >> altezza;
     retangolo r1 (base,altezza);
     retangolo r2(8);
-    retangolo r3 ;
+    retangolo r3;
     cout << "l'area del retangolo: " << r1.calcolaArea() << endl;
     cout << "il perimetro del retangolo: " << r1.calcolaperimetro() << endl; 
     cout << "l'area del retangolo: " << r2.calcolaArea() << endl;
