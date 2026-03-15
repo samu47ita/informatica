@@ -11,11 +11,11 @@ struct coda
 void enqueue(coda &c, int elemento)
 {
     c.A[c.j] = elemento;
-    c.j = (c.j + 1) % 10; // Incrementa j e avvolge intorno a 10
+    c.j = (c.j + 1) % 10; 
 }
 int dequeue(coda &c){
     int elemento = c.A[c.i];
-    c.i = (c.i + 1) % 10; // Incrementa i e avvolge intorno a 10
+    c.i = (c.i + 1) % 10; 
     return elemento;
 }
 bool isEmpty(coda c){
