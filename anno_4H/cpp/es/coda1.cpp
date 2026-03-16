@@ -2,7 +2,7 @@
 
 using namespace std;
 
-struct Nodo // Struttura del nodo della coda
+struct Nodo 
 {
     int Info;
     Nodo* next;
@@ -13,28 +13,28 @@ typedef Nodo* PNodo;
 class Coda
 {
 private:
-    PNodo Inizio; // Puntatore al nodo di inizio della coda
-    PNodo Fine; // Puntatore al nodo di fine della coda
+    PNodo Inizio; 
+    PNodo Fine;
 public:
-    Coda() // Costruttore della coda, inizializza la coda vuota
+    Coda() 
     {
-        Inizio = NULL; // La coda è vuota, quindi il puntatore Inizio è NULL
-        Fine = NULL; // La coda è vuota, quindi il puntatore Fine è NULL
+        Inizio = NULL; 
+        Fine = NULL; 
     }
 
-    void Inserisci(int valore) // Aggiunge un elemento alla fine della coda
+    void Inserisci(int valore) 
     {
-        PNodo newNode = new Nodo; // Crea un nuovo nodo
-        newNode->Info = valore; // Assegna il valore al campo Info del nuovo nodo
-        newNode->next = NULL; // Il campo next del nuovo nodo è NULL, poiché sarà l'ultimo nodo della coda
+        PNodo newNode = new Nodo; 
+        newNode->Info = valore; 
+        newNode->next = NULL; 
 
-        if (Fine != NULL) // Se la coda non è vuota, collega il nuovo nodo al nodo di fine attuale
+        if (Fine != NULL) 
         {
-            Fine->next = newNode; // Il campo next del nodo di fine attuale punta al nuovo nodo
+            Fine->next = newNode; 
         }
-        Fine = newNode; // Il puntatore Fine ora punta al nuovo nodo, che è diventato il nuovo nodo di fine della coda
+        Fine = newNode; 
 
-        if (Inizio == NULL) // Se la coda era vuota prima dell'inserimento, il puntatore Inizio deve anche puntare al nuovo nodo
+        if (Inizio == NULL) 
         {
             Inizio = newNode; 
         }
