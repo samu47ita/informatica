@@ -36,56 +36,56 @@ public:
 
         if (Inizio == NULL) // Se la coda era vuota prima dell'inserimento, il puntatore Inizio deve anche puntare al nuovo nodo
         {
-            Inizio = newNode; // Il puntatore Inizio ora punta al nuovo nodo, che è diventato anche il nodo di inizio della coda
+            Inizio = newNode; 
         }
 
     }
 
-    void Rimuovi() // Rimuove l'elemento all'inizio della coda
+    void Rimuovi() 
     {
-        if (Inizio != NULL) // Controlla se la coda non è vuota prima di rimuovere un elemento
+        if (Inizio != NULL) 
         {
-            PNodo temp = Inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
-            Inizio = Inizio->next; // Il puntatore Inizio ora punta al nodo successivo, che diventa il nuovo nodo di inizio della coda
-            delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
+            PNodo temp = Inizio; 
+            Inizio = Inizio->next; 
+            delete temp; 
 
-            if (Inizio == NULL) // Se la coda è diventata vuota dopo la rimozione, anche il puntatore Fine deve essere impostato a NULL
+            if (Inizio == NULL) 
             {
-                Fine = NULL; // Il puntatore Fine ora è NULL, indicando che la coda è vuota
+                Fine = NULL; 
             }
         }
     }
 
-    int PrimoElemento() // Restituisce l'elemento all'inizio della coda senza rimuoverlo
+    int PrimoElemento() 
     {
-        if (Inizio != NULL) // Controlla se la coda non è vuota prima di accedere all'elemento inizio
+        if (Inizio != NULL) 
         {
-            return Inizio->Info; // Restituisce il valore del campo Info del nodo all'inizio della coda
+            return Inizio->Info; 
         }
-        return 0; // Valore di default se la coda è vuota
+        return 0; 
     }
 
-    bool isEmpty() // Verifica se la coda è vuota
+    bool isEmpty() 
     {
-        return Inizio == NULL; // Restituisce true se il puntatore Inizio è NULL, indicando che la coda è vuota, altrimenti restituisce false
+        return Inizio == NULL;
     }
     
 };
 
 int main()
 {
-    Coda c; // Crea un'istanza della classe Coda
+    Coda c;
 
-    c.Inserisci(1); // Inserisce il valore 10 nella coda
-    c.Inserisci(2); // Inserisce il valore 20 nella coda
-    c.Inserisci(3); // Inserisce il valore 30 nella coda
+    c.Inserisci(1); 
+    c.Inserisci(2); 
+    c.Inserisci(3); 
 
-    cout << "Primo elemento della coda: " << c.PrimoElemento() << endl; // Stampa il primo elemento della coda
+    cout << "Primo elemento della coda: " << c.PrimoElemento() << endl; 
 
     c.Rimuovi(); // Rimuove l'elemento all'inizio della coda
 
-    cout << "Primo elemento dopo la rimozione: " << c.PrimoElemento() << endl; // Stampa il primo elemento della coda dopo la rimozione
+    cout << "Primo elemento dopo la rimozione: " << c.PrimoElemento() << endl; 
 
-    return 0; // Termina il programma
+    return 0; 
 }
     

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct Nodo // Struttura del nodo della pila
+struct Nodo 
 {
     int info;
     Nodo* next;
@@ -11,82 +11,82 @@ struct Nodo // Struttura del nodo della pila
 
 typedef Nodo* PNodo;
 
-class Pila // Classe che rappresenta la pila
+class Pila 
 {
-    private: // Puntatore al nodo superiore della pila
+    private: 
 
-        struct Nodo* top; // Puntatore al nodo superiore della pila
+        struct Nodo* top; 
 
-    public: // Costruttore della pila
+    public: 
 
-        Pila() // Inizializza la pila vuota
+        Pila() 
         {
-            top = NULL; // La pila è vuota, quindi il puntatore top è NULL
+            top = NULL; 
         }
 
-        void push(int valore) // Aggiunge un elemento alla cima della pila
+        void push(int valore) 
         {
-            Nodo* newNode = new  Nodo; // Crea un nuovo nodo
-            newNode->info = valore; // Assegna il valore al campo info del nuovo nodo
-            newNode->next = top; // Il campo next del nuovo nodo punta al nodo attualmente in cima alla pila
+            Nodo* newNode = new  Nodo; 
+            newNode->info = valore; 
+            newNode->next = top; 
             top = newNode; 
         }
 
-        void pop() // Rimuove l'elemento in cima alla pila
+        void pop() 
         {
-            if (top != NULL) // Controlla se la pila non è vuota prima di rimuovere un elemento
+            if (top != NULL)
             {
-                Nodo* temp = top; // Salva il nodo attualmente in cima alla pila in un puntatore temporaneo
-                top = top->next; // Il puntatore top ora punta al nodo successivo, che diventa la nuova cima della pila
-                delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
+                Nodo* temp = top; 
+                top = top->next; 
+                delete temp; 
             }
         }
 
-        int Top() // Restituisce l'elemento in cima alla pila senza rimuoverlo
+        int Top() 
         {
-            if (top != NULL) // Controlla se la pila non è vuota prima di accedere all'elemento in cima
+            if (top != NULL) 
             {
-                return top->info; // Restituisce il valore del campo info del nodo in cima alla pila
+                return top->info; 
             }
-            return 0; // Valore di default se la pila è vuota
+            return 0;
         }
 
-        bool isEmpty() // Verifica se la pila è vuota
+        bool isEmpty() 
         {
-            return top == NULL; // Restituisce true se il puntatore top è NULL, indicando che la pila è vuota, altrimenti restituisce false
+            return top == NULL;
         }
 
-        void print() // Stampa gli elementi della pila dalla cima alla base
+        void stampa() 
         {
-            Nodo* x = top; // Inizia a stampare dal nodo in cima alla pila
-            while (x != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando x diventa NULL)
+            Nodo* x = top; 
+            while (x != NULL) 
             {
-                cout << x->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
+                cout << x->info << " ";
 
-                x = x->next; // Passa al nodo successivo nella pila
+                x = x->next; 
             }
 
-            cout << endl; // Stampa una nuova linea dopo aver stampato tutti gli elementi della pila
+            cout << endl; 
         }
 };
 
 int main()
 {
-    Pila pila; // Crea un'istanza della classe Pila
+    Pila pila; 
 
-    pila.push(1); // Aggiunge l'elemento 10 alla pila
-    pila.push(2); // Aggiunge l'elemento 20 alla pila
-    pila.push(3); // Aggiunge l'elemento 30 alla pila
+    pila.push(1); 
+    pila.push(2); 
+    pila.push(3); 
 
-    cout << "Elementi nella pila: "; // Stampa un messaggio prima di mostrare gli elementi della pila
-    pila.print(); // Stampa gli elementi attualmente presenti nella pila
+    cout << "Elementi nella pila: "; 
+    pila.stampa();
 
-    cout << "Elemento in cima alla pila: " << pila.Top() << endl; // Stampa l'elemento in cima alla pila
+    cout << "Elemento in cima alla pila: " << pila.Top() << endl; 
 
-    pila.pop(); // Rimuove l'elemento in cima alla pila
+    pila.pop();
 
-    cout << "Elementi nella pila dopo pop: "; // Stampa un messaggio prima di mostrare gli elementi della pila dopo la rimozione
-    pila.print(); // Stampa gli elementi attualmente presenti nella pila dopo la rimozione
+    cout << "Elementi nella pila dopo pop: "; 
+    pila.stampa(); 
 
-    return 0; // Termina il programma con successo
+    return 0; 
 }
