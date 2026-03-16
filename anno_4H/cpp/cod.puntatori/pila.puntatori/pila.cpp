@@ -73,18 +73,13 @@ class Pila
 int main()
 {
     Pila pila; 
-
     pila.push(1); 
     pila.push(2); 
     pila.push(3); 
-
     cout << "Elementi nella pila: "; 
     pila.stampa();
-
     cout << "Elemento in cima alla pila: " << pila.Top() << endl; 
-
     pila.pop();
-
     cout << "Elementi nella pila dopo pop: "; 
     pila.stampa(); 
 
