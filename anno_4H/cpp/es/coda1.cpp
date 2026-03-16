@@ -82,7 +82,7 @@ int main()
 
     cout << "Primo elemento della coda: " << c.PrimoElemento() << endl; 
 
-    c.Rimuovi(); // Rimuove l'elemento all'inizio della coda
+    c.Rimuovi();
 
     cout << "Primo elemento dopo la rimozione: " << c.PrimoElemento() << endl; 
 
