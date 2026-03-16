@@ -29,7 +29,7 @@ class Pila // Classe che rappresenta la pila
             Nodo* newNode = new  Nodo; // Crea un nuovo nodo
             newNode->info = valore; // Assegna il valore al campo info del nuovo nodo
             newNode->next = top; // Il campo next del nuovo nodo punta al nodo attualmente in cima alla pila
-            top = newNode; // Il puntatore top ora punta al nuovo nodo, che è diventato la nuova cima della pila
+            top = newNode; 
         }
 
         void pop() // Rimuove l'elemento in cima alla pila

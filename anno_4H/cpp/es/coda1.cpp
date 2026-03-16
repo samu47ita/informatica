@@ -4,56 +4,88 @@ using namespace std;
 
 struct Nodo // Struttura del nodo della coda
 {
-    int info;
+    int Info;
     Nodo* next;
 };
 
 typedef Nodo* PNodo;
 
-class Coda // Classe che rappresenta la coda
+class Coda
 {
-    private: // Puntatori al nodo anteriore e posteriore della coda
+private:
+    PNodo Inizio; // Puntatore al nodo di inizio della coda
+    PNodo Fine; // Puntatore al nodo di fine della coda
+public:
+    Coda() // Costruttore della coda, inizializza la coda vuota
+    {
+        Inizio = NULL; // La coda è vuota, quindi il puntatore Inizio è NULL
+        Fine = NULL; // La coda è vuota, quindi il puntatore Fine è NULL
+    }
 
-        struct Nodo* inizio; // Puntatore al nodo anteriore della coda
-        struct Nodo* fine; // Puntatore al nodo posteriore della coda
+    void Inserisci(int valore) // Aggiunge un elemento alla fine della coda
+    {
+        PNodo newNode = new Nodo; // Crea un nuovo nodo
+        newNode->Info = valore; // Assegna il valore al campo Info del nuovo nodo
+        newNode->next = NULL; // Il campo next del nuovo nodo è NULL, poiché sarà l'ultimo nodo della coda
 
-    public: // Costruttore della coda
-
-        Coda() // Inizializza la coda vuota
+        if (Fine != NULL) // Se la coda non è vuota, collega il nuovo nodo al nodo di fine attuale
         {
-            inizio = NULL; // La coda è vuota, quindi il puntatore inizio è NULL
-            fine = NULL; // La coda è vuota, quindi il puntatore fine è NULL
+            Fine->next = newNode; // Il campo next del nodo di fine attuale punta al nuovo nodo
+        }
+        Fine = newNode; // Il puntatore Fine ora punta al nuovo nodo, che è diventato il nuovo nodo di fine della coda
+
+        if (Inizio == NULL) // Se la coda era vuota prima dell'inserimento, il puntatore Inizio deve anche puntare al nuovo nodo
+        {
+            Inizio = newNode; // Il puntatore Inizio ora punta al nuovo nodo, che è diventato anche il nodo di inizio della coda
         }
 
-        void Inserimento(int valore) // Aggiunge un elemento alla fine della coda
-        {
-            Nodo* newNode = new  Nodo; // Crea un nuovo nodo
-            newNode->info = valore; // Assegna il valore al campo info del nuovo nodo
-            newNode->next = NULL; // Il campo next del nuovo nodo è NULL, poiché sarà l'ultimo nodo della coda
+    }
 
-            if (fine == NULL) // Se la coda è vuota, il nuovo nodo diventa sia il front che il rear
+    void Rimuovi() // Rimuove l'elemento all'inizio della coda
+    {
+        if (Inizio != NULL) // Controlla se la coda non è vuota prima di rimuovere un elemento
+        {
+            PNodo temp = Inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
+            Inizio = Inizio->next; // Il puntatore Inizio ora punta al nodo successivo, che diventa il nuovo nodo di inizio della coda
+            delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
+
+            if (Inizio == NULL) // Se la coda è diventata vuota dopo la rimozione, anche il puntatore Fine deve essere impostato a NULL
             {
-                inizio = fine = newNode; // Il nuovo nodo è sia il front che il rear della coda
-            }
-            else // Altrimenti, aggiungi il nuovo nodo alla fine della coda e aggiorna il nodo in coda
-            {
-                fine->next = newNode; // Il campo next del nodo attualmente in fine punta al nuovo nodo
-                fine = newNode; // Il puntatore fine ora punta al nuovo nodo, che è diventato l'ultimo nodo della coda
+                Fine = NULL; // Il puntatore Fine ora è NULL, indicando che la coda è vuota
             }
         }
+    }
 
-        void Estrazione() // Rimuove l'elemento all'inizio della coda
+    int PrimoElemento() // Restituisce l'elemento all'inizio della coda senza rimuoverlo
+    {
+        if (Inizio != NULL) // Controlla se la coda non è vuota prima di accedere all'elemento inizio
         {
-            if (inizio != NULL) // Controlla se la coda non è vuota prima di rimuovere un elemento
-            {
-                Nodo* temp = inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
-                inizio = inizio->next; // Il puntatore inizio ora punta al nodo successivo, che diventa il nuovo inizio della coda
-
-                if (inizio == NULL) // Se la coda è diventata vuota dopo la rimozione, aggiorna anche il rear
-                {
-                    fine = NULL; // La coda è vuota, quindi il puntatore rear è NULL
-                }
-                delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
-            }
+            return Inizio->Info; // Restituisce il valore del campo Info del nodo all'inizio della coda
         }
+        return 0; // Valore di default se la coda è vuota
+    }
+
+    bool isEmpty() // Verifica se la coda è vuota
+    {
+        return Inizio == NULL; // Restituisce true se il puntatore Inizio è NULL, indicando che la coda è vuota, altrimenti restituisce false
+    }
+    
 };
+
+int main()
+{
+    Coda c; // Crea un'istanza della classe Coda
+
+    c.Inserisci(1); // Inserisce il valore 10 nella coda
+    c.Inserisci(2); // Inserisce il valore 20 nella coda
+    c.Inserisci(3); // Inserisce il valore 30 nella coda
+
+    cout << "Primo elemento della coda: " << c.PrimoElemento() << endl; // Stampa il primo elemento della coda
+
+    c.Rimuovi(); // Rimuove l'elemento all'inizio della coda
+
+    cout << "Primo elemento dopo la rimozione: " << c.PrimoElemento() << endl; // Stampa il primo elemento della coda dopo la rimozione
+
+    return 0; // Termina il programma
+}
+    
