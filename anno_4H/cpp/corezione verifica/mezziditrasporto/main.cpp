@@ -11,7 +11,7 @@ int main()
     cout<<"modello: "<<v1.getmodello()<<endl;
     cout<<"chilometraggio: "<<v1.getchilometragio()<<endl;
     v1.agiungiChilometri(500);
-    cout<<"chilometraggio dopo aver aggiunto 500 km: "<<v1.getchilometragio()<<endl; 
+    cout<<"chilometraggio dopo aggiunto 500 km: "<<v1.getchilometragio()<<endl; 
 
     return 0;
 }
