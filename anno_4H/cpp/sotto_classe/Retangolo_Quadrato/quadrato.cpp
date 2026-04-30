@@ -1,7 +1,7 @@
 #include<iostream>
 #include"quadrato.h"
 using namespace std;
-quadrato::quadrato(int lato)
+quadrato::quadrato(int lato):retangolo(lato, lato)
 {
     this->lato = lato;
 }

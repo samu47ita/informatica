@@ -1,6 +1,7 @@
 #include<iostream>
+#include"retangolo.h"
 using namespace std;
-class quadrato
+class quadrato : public retangolo
 {
     private:
         int lato;
