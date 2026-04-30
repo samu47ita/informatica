@@ -3,7 +3,7 @@ using namespace std;
 
 class retangolo
 {
-    private:
+    protected:
         int base;
         int altezza;
     public:

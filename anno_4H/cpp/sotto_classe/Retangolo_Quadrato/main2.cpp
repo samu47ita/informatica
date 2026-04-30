@@ -1,5 +1,7 @@
 #include<iostream>
 #include"retangolo.h"
+#include"retangolo.cpp"
+#include"quadrato.cpp"
 #include"quadrato.h"
 using namespace std;
 int main()

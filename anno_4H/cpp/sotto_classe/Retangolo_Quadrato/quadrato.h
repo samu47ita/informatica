@@ -3,7 +3,7 @@
 using namespace std;
 class quadrato : public retangolo
 {
-    private:
+    protected:
         int lato;
     public:
         quadrato(int lato );
