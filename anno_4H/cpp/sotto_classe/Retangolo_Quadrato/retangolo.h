@@ -7,7 +7,7 @@ class retangolo
         int base;
         int altezza;
     public:
-        retangolo(int base = 1, int altezza = 1);
+        retangolo(int base, int altezza);
         void setBase(int base);
         void setAltezza(int altezza);
         int getBase(); 
